@@ -5,6 +5,12 @@
 #include<iostream>
 using namespace std;
 
+void changeArr(int arr[],int size){
+    for(int i = 0; i < size; i++){    // ye function use ho raha hai call by reference ko samajhane ke liye
+        arr[i] =2* arr[i];
+    }
+}
+
 int main(){
     //create array
     int marks[4]  = {90,80,30,50}; // ye 4 likha hai agar usako nahi likha to bhi chalega but ye 4 likha hai to 4 hi data store kar sakte ho aur nahi likhatae ho to jitna data store karoge utna hi data store hoga
@@ -43,5 +49,14 @@ int main(){
 
 
     // pass by reference
+    int arr[] = {1,2,3};
+
+    changeArr(arr,3);
+
+    for(int i = 0; i< size; i++){
+        arr[i] = 2* arr[i];
+    }
+    return 0;
+
     
 }
